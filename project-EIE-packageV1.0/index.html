@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Electronics</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="login.css">
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+<style type="text/css">
+
+	.mySlides {display:none;}
+	.h{
+		text-align: center;
+	}
+	li {
+  float: left;
+}
+
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+html{ scroll-behavior: smooth;}
+</style>
+
+<script type="text/javascript">
+	window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
+
+</script>
+<body>
+	
+		<div style="text-align: center;display:flex;justify-content: space-between;">
+			<img src="logo.jpg" width="150px";>
+			
+			<h1>ACHARYA PRAFULLA CHANDRA RAY POLYTECHNIC <span style="font-size: 30px;">ELECTRONICS AND INSTRUMENTATION ENGINEERING<br><span style="font-size: 20px;">Jadavpur, Kolkata-32</span></span></h1>
+			
+		</div>
+		
+	
+	<div class="nav">
+		<ul style="list-style-type: none; margin:0;padding: 0;overflow: hidden;background-color: #333;">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#about-section">About</a></li>
+			<li><a id="adm" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Admin Login</a></li>
+			<li class="dropdown">
+			    <a href="javascript:void(0)" class="dropbtn">Academics</a>
+			    <div class="dropdown-content">
+			      <a href="students.html">Our Students</a>
+			      <a href="#">Our Teachers</a>
+			    </div>
+			</li>
+			<li><a href="#gallery">Gallery</a></li>
+			<li><a href="#events">Events</a></li>
+			<li><a href="#feedback">Feedback</a></li>
+			<div class="search-container" style="">
+			    <form action="/action_page.php">
+			      <input type="text" placeholder="Search.." name="search">
+			      <button type="submit"><i class="fa fa-search"></i></button>
+			    </form>
+			</div>
+		</ul>
+	</div>
+
+	
+	<hr>
+	<div>
+	<div class="slide-section">
+	  <img class="mySlides" src="images/1.png" style="width:100%">
+	  <img class="mySlides" src="images/2.jpg" style="width:100%">
+	  <img class="mySlides" src="images/3.jpeg" style="width:100%">
+	  <img class="mySlides" src="images/4.jpg" style="width:100%">
+	</div>
+	</div>
+<div id="id01" class="modal">
+  
+  <form id="login-form" class="modal-content animate" action="admin.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="images/avatar.png" alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <input type="submit" value="Login" id="login"> 
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form>
+</div>
+
+	<!-- <script src="login.js"></script> -->
+	<script src="slideshow.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+
+	<script src="main.js"></script>
+	<div id="about-section" style="display: flex;background-color: seagreen;font-family: 'Brush Script MT', cursive;">
+		<h2>
+			Hello Everyone, I am Alok Mondal and this is my Department's Website.
+			The Idea behind this small project is to ........
+		</h2>
+		<img src="logo.jpg" width="200px">
+	</div>
+
+	<footer>
+		Developed by Subham
+	</footer>
+</body>
+</html>
